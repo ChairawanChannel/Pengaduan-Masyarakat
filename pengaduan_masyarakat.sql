@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2024 at 08:33 AM
+-- Generation Time: Oct 19, 2024 at 07:44 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -64,8 +64,6 @@ CREATE TABLE `pengaduan` (
 
 INSERT INTO `pengaduan` (`Id_pengaduan`, `Tgl_pengaduan`, `nik`, `isi_laporan`, `foto`, `status`) VALUES
 (44, '2024-10-02', '123', 'awaw', 'bob-brewer-13WwJeOuChs-unsplash.jpg', 'selesai'),
-(45, '2024-10-02', '123', 'awaw', 'th.jpg', 'selesai'),
-(46, '2024-10-02', '111847278', 'Banjir Bandang', 'th.jpg', 'ditolak'),
 (47, '2024-10-02', '111847278', 'awaa', 'bob-brewer-13WwJeOuChs-unsplash (1).jpg', 'proses'),
 (48, '2024-10-16', '123', 'Miki Mouse', 'logoHome.png', 'ditolak');
 
@@ -123,7 +121,8 @@ CREATE TABLE `sessions_admin` (
 --
 
 INSERT INTO `sessions_admin` (`id`, `id_petugas`, `session_token`, `created_at`) VALUES
-(8, 2, '5e63d227b14a05e661a43d752fc86816d685d5eaac26cee4f023356f3cd35e94', '2024-10-16 04:49:15');
+(25, 12, 'f23b9ba5b6d03df8a5ea6ca5dd429b1102693bda859735c7688680c8b57654fe', '2024-10-18 02:28:59'),
+(26, 2, '867ad60bf96808f949608741c78bda3d7b5c038254007538804df7e9d9cf83de', '2024-10-18 02:29:24');
 
 -- --------------------------------------------------------
 
@@ -138,14 +137,6 @@ CREATE TABLE `tanggapan` (
   `tanggapan` text DEFAULT NULL,
   `id_petugas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tanggapan`
---
-
-INSERT INTO `tanggapan` (`id_tanggapan`, `id_pengaduan`, `tgl_tanggapan`, `tanggapan`, `id_petugas`) VALUES
-(1293, 44, '2024-10-02', 'selesai', NULL),
-(1294, 45, '2024-10-02', 'selesai', NULL);
 
 --
 -- Indexes for dumped tables
@@ -216,13 +207,13 @@ ALTER TABLE `petugas`
 -- AUTO_INCREMENT for table `sessions`
 --
 ALTER TABLE `sessions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `sessions_admin`
 --
 ALTER TABLE `sessions_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `tanggapan`
